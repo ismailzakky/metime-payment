@@ -1,0 +1,32 @@
+entity PaymentGroup {
+	bank Bank
+	bookNumber Integer
+    id String
+    status Status
+    uniqueCode Integer
+}
+
+entity Payment {
+	amount Long
+    id String
+    type Type
+}
+
+enum Type {
+	SUBSCRIPTION,PROMOTED
+}
+
+enum Status {
+	PROCESSING,PENDING,SUCCEED,CANCELED
+}
+
+enum Bank {
+ BCA,MANDIRI,BNI
+}
+
+relationship OneToMany {
+	PaymentGroup{Payments} to Payment
+}
+
+service all with serviceImpl
+paginate PaymentGroup with pagination

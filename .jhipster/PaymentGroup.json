@@ -1,0 +1,36 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "payments",
+            "otherEntityName": "payment",
+            "otherEntityRelationshipName": "paymentGroup"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "bank",
+            "fieldType": "Bank",
+            "fieldValues": "BCA,MANDIRI,BNI"
+        },
+        {
+            "fieldName": "bookNumber",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "status",
+            "fieldType": "Status",
+            "fieldValues": "PROCESSING,PENDING,SUCCEED,CANCELED"
+        },
+        {
+            "fieldName": "uniqueCode",
+            "fieldType": "Integer"
+        }
+    ],
+    "changelogDate": "20170924090210",
+    "entityTableName": "payment_group",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceImpl"
+}

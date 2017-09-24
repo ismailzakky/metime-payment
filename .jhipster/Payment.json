@@ -1,0 +1,27 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "paymentGroup",
+            "otherEntityName": "paymentGroup",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "amount",
+            "fieldType": "Long"
+        },
+        {
+            "fieldName": "type",
+            "fieldType": "Type",
+            "fieldValues": "SUBSCRIPTION,PROMOTED"
+        }
+    ],
+    "changelogDate": "20170924090211",
+    "entityTableName": "payment",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceImpl"
+}
